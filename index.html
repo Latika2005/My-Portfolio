@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/2d862411f5.js" crossorigin="anonymous"></script>
+<style>
+    body {
+      background: black;
+      margin: 0;
+      height: 100vh;
+    }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+   <canvas id="stars"></canvas>
+  <header class="bg-[#FFFFFF30] z-20 relative">
+  <nav class="flex justify-between items-center px-5 h-16 font-bold relative">
+    <a href="#" class="text-gray-100">My portfolio</a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-5 font-semibold text-gray-400 text-sm">
+      <li><a href="#home" class="hover:text-purple-400 hover:underline">Home</a></li>
+      <li><a href="#me" class="hover:text-purple-400 hover:underline">About Me</a></li>
+      <li><a href="#project" class="hover:text-purple-400 hover:underline">Projects</a></li>
+      <li><a href="#contact" class="hover:text-purple-400 hover:underline">Contact</a></li>
+    </ul>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden relative">
+      <i class="fa-solid fa-bars text-xl cursor-pointer" id="menu-toggle"></i>
+      <ul id="mobile-menu" 
+          class="absolute right-0 mt-2 bg-[#1E1E1E] w-40 rounded-md shadow-lg hidden z-50">
+        <li class="px-4 py-2 hover:bg-purple-600"><a href="#home">Home</a></li>
+        <li class="px-4 py-2 hover:bg-purple-600"><a href="#me">About Me</a></li>
+        <li class="px-4 py-2 hover:bg-purple-600"><a href="#project">Projects</a></li>
+        <li class="px-4 py-2 hover:bg-purple-600"><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+    <!--hero section-->
+    <section id="home">
+    <div class="relative flex items-center justify-center h-screen text-white">
+    <div class="relative z-10 h-[200px] rounded-2xl">
+    <img src="cropped.jpg"/>
+    </div>
+    <div class="text-violet-50 text-xl z-10">
+        <h1 class="font-bold text-center">Hi,I'm <span class="text-purple-500">Latika</span> Popli</h1>
+        <p class="text-sm mt-3 font-mono">I create stellar web experinces with modern technologies.<span class="text-purple-500" id="typo">Specializing in front-end develpoment</span>
+            ,<br/>I build interfaces that are both beautiful and functional.
+        </p>
+        <div class="relative flex items-center justify-center">
+        <button class="bg-purple-600 px-3 rounded-full text-sm p-1.5 mt-8 hover:bg-purple-800 h-auto">Download resume</button>
+        </div>
+        <div class="text-gray-400 text-sm animate-bounce relative flex items-center justify-center mt-10">
+        Scroll ↓
+    </div>
+    </div>
+    </div>
+    </section>
+    <!--about me-->
+    <section id="me" class="py-20 px-10 h-screen">
+      <h1 class="text-gray-100 font-bold text-center lg:text-xl">About <span class="text-violet-600">Me</span></h1>
+      <div class="text-white basics-64 flex stretch md:flex-row gap-10 justify-between">
+      <p class="text-[13px] mt-10 text-gray-300 text-center leading-relaxed">Hi I'm Latika! I'm a talented web developer known for my exceptional front-end and back-end skills.<br/> I consistently crafts intuitive user interfaces and builds robust, 
+        scalable server-side applications.<br/> My passion for clean code and innovative solutions shines through in every project, making me <br/> a highly valued asset in the dynamic world of web development. 
+        My dedication to staying current <br/> with the latest technologies ensures my work is always cutting-edge.
+        I'm constantly learning new <br/> technologies and techniques to stay at the forefront.
+      </p>
+      <div class="basics-64 md:w-auto">
+      <h1 class="mt-8 font-semibold px-14 font-serif">My Education timeline</h1>
+      <ul>
+        <li class="relative flex gap-5 mt-3">
+          <div class="relative">    
+          <i class="fa-solid fa-circle" style="color: #e60f0f;"></i>
+          <div class="absolute top-5 left-1/2 -translate-x-1/2 h-16 w-[1.5px] bg-white"></div>
+          </div>
+          <div class="text-gray-400 text-sm">
+            <p>2021</p>
+            <p class="mt-2">Completed 10th class with a good result from Manav Sthali School. Overall percentage 84%, opted PCM</p>
+          </div>
+        </li>
+
+        <li class="relative flex gap-5 mt-3">
+          <div class="relative">  
+          <i class="fa-solid fa-circle" style="color: #e60f0f;"></i>
+          <div class="absolute top-5 left-1/2 -translate-x-1/2 h-16 w-[1.5px] bg-white"></div>
+          </div>
+          <div class="text-gray-400 text-sm">
+            <p>2023</p>
+            <p class="mt-2">Completed 12th class with a good result from Manav Sthali School. Overall percentage 80%, Took CSE from GGSIPU</p>
+          </div>
+        </li>
+
+        <li class="relative flex gap-5 mt-3">
+          <div class="relative">  
+          <i class="fa-solid fa-circle" style="color: #e60f0f;"></i>
+          </div>
+          <div class="text-gray-400 text-sm">
+            <p>2023-2027</p>
+            <p class="mt-2">Doing Btech from ggsipu. Currently in third year with a CGPA of 8.7</p>
+          </div>
+        </li>
+      </ul>
+      </div>
+      </div>
+      <!---skills section--->
+      <div class="bg-[#FFFFFF30] rounded-md mt-6 p-4 gap-2">
+      <h1 class="text-violet-100 font-bold text-lg">Skills</h1>
+      <div class="flex flex-wrap mt-2 flex space-x-2">
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">HTML</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">CSS</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">Tailwind-CSS</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">Javascript</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">DSA</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">OOPS</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">Python</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">NodeJS</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">C++</button>
+      <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">C lang</button>
+    <button class="text-white rounded-full bg-violet-600 p-1.5 w-auto h-[28px] px-3.5 flex items-center justify-center text-sm transition-transform duration-300 transform hover:scale-110">Mysql</button>
+    </div>  
+    </div>
+      </section>
+      <!--projects-->
+      <section id="project">
+        <div class="py-10 px-20 h-screen text-white mt-5">
+        <h1 class="font-bold text-xl text-center">Featured <span class="text-violet-600">Projects</h1>
+        <p class="text-sm text-gray-400 text-center mb-5">Here are some of my recent projects. Each project was carefully crafted with attention to <br/> detail, performance, and user experince.</p>
+        <div class="flex gap-2">
+        <div class="inline-block bg-[#0A0A0A] rounded-md transition-transform transform hover:scale-110 hover:border-2 border-white">
+            <img src="amazon.png" class="h-[150px] rounded-md"/>
+            <div class="flex items-center p-3 text-white gap-3 rounded-full border-[2] border-neutral-100">
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">HTML</button>
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">Tailwind CSS</button>
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">Javascript</button>
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">NodeJs</button>
+            </div>   
+            <div class="p-3 mx-2 text-center">
+            <h1 class="font-bold">Amazon Clone</h1>
+            <p class="text-sm text-gray-400">Full featured E-commerce platform <br/>with user authentication and payment <br/>processing.</p>
+          </div>  
+          </div>
+
+          <div class="inline-block bg-[#0A0A0A] rounded-md transition-transform transform hover:scale-110 hover:border-2 border-white">
+            <img src="resume.jpeg" class="h-[160px] w-full object-cover rounded-md"/>
+            <div class="flex items-center p-3 text-white gap-3 rounded-full border-[2] border-neutral-100">
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">React</button>
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">Tailwind CSS</button>
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">Python</button>
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">NodeJs</button>
+            </div>   
+            <div class="p-2 text-center">
+            <h1 class="font-bold">Resume scanner</h1>
+            <p class="text-sm text-gray-400">AI-powered resume scanner extracting <br/> skills, experience, and ranking candidates <br/>using NLP and keyword-matching algorithms.</p>
+          </div>  
+          </div>
+
+          <div class="inline-block bg-[#0A0A0A] rounded-md transition-transform transform hover:scale-110 hover:border-2 border-white">
+            <img src="health.jpeg" class="h-[150px] rounded-md"/>
+            <div class="flex items-center p-3 text-white gap-3 rounded-full border-[2] border-neutral-100">
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">Python</button>
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">ReactJS</button>
+              <button class="rounded-full border-2 p-1 text-[10px] border-gray-600">MongoDB</button>
+            </div>   
+            <div class="p-2 mx-2 text-center">
+            <h1 class="font-bold">Chatbot for mental health</h1>
+            <p class="text-sm text-gray-400">AI-powered mental health chatbot offering<br/> empathetic conversations,mood tracking,<br/> cognitive behavioral therapy techniques,and <br/>personalized self-care recommendations.</p>
+          </div>  
+          </div>
+          </div>
+          <div class="flex items-center justify-center relative z-[9999] pointer-events-auto mt-4.5">
+          <a href="https://github.com/Latika2005" target="_blank" class="rounded-full bg-violet-600 text-white px-4 py-1 hover:bg-violet-800">Go to my GitHub -></a>
+          </div>  
+        </div>
+      </section>
+      <!--Contact me-->
+<section id="contact" class="h-screen text-white py-10 px-20">
+  <div class="flex flex-col items-center">
+  <h1 class="py-2 px-5 text-center font-bold text-white mt-10 text-xl mb-5">Get In <span class="text-violet-600">Touch</span></h1>
+  </div>
+  <div class="flex items-start justify-center gap-8">
+  <div class="inline-block bg-[#0A0A0A]">
+  <h1 class="text-lg text-center mb-4">Contact Information</h1>
+  <div class="flex flex-wrap gap-2">
+  <i class="fa-solid fa-envelope mt-1.5" style="color: #8167d0;"></i>
+  <p>Email
+  <br/><span class="text-sm text-violet-400">Latikapopli2005@gmail.com</span></p>
+  </div>
+  <div class="flex flex-wrap gap-2 mt-2">
+  <i class="fa-solid fa-phone mt-1.5" style="color: #8167d0;"></i>
+  <p>Phone
+    <br/><span class="text-sm text-violet-400">7428778774</span>
+  </p>
+  </div>
+  <div class="flex flex-wrap gap-2 mt-2">
+  <i class="fa-solid fa-location-dot mt-1.5" style="color: #7b5fce;"></i>
+  <p>Location
+    <br/><span class="text-sm text-violet-400">Delhi, India</span>
+  </p>
+  </div>
+  </div>
+<!---form--->
+
+  <div class="bg-neutral-900 p-6 rounded-xl shadow-lg w-80 z-50">
+    <h2 class="text-white text-xl font-semibold mb-4">Send a Message</h2>
+    <form action="#" method="POST" class="space-y-4" id="abc">
+      <div>
+        <label for="name" class="block text-gray-100 text-sm mb-1">Your Name</label>
+        <input type="text" id="name" name="name" 
+               class="w-full p-2 rounded-md bg-zinc-950 text-white placeholder-gray-500 text-xs
+                      focus:outline-none focus:ring-2 focus:ring-purple-500"
+               placeholder="Enter your name">
+      </div>
+      <div>
+        <label for="email" class="block text-gray-100 text-sm mb-1">Your Email</label>
+        <input type="email" id="email" name="email"
+               class="w-full p-2 rounded-md bg-zinc-950 text-white placeholder-bg-zinc-950 text-xs
+                      focus:outline-none focus:ring-2 focus:ring-purple-500"
+               placeholder="Enter your email">
+      </div>
+      <div>
+        <label for="message" class="block text-sm mb-1 text-gray-100">Your Message</label>
+        <textarea id="message" name="message" rows="3"
+                  class="w-full p-2 rounded-md bg-zinc-950 text-white placeholder-bg-zinc-950 
+                         focus:outline-none focus:ring-2 focus:ring-purple-500 text-xs"
+                  placeholder="Hello, I'd like to talk about..."></textarea>
+      </div>
+      <button type="submit" class="w-full bg-purple-600 text-white font-medium py-2 rounded-full transition duration-300 flex items-center justify-center gap-2 hover:bg-violet-800">
+        Send Message <i class="fa-regular fa-paper-plane" style="color: #f5f5f5;"></i></button>
+    </form>
+  </div>
+  </div>
+</section>
+    <script src="port.js"></script>
+</body>
+</html>
