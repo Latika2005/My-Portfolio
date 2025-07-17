@@ -33,7 +33,7 @@ This project helped me refine my **front-end development skills** and strengthen
 
 ## 📬 Contact
 - **Email:** *latikapopli2005@gmail.com*
-- **LinkedIn:** [Latika Popli](www.linkedin.com/in/latika-popli)
+- **LinkedIn:** [Latika Popli](https://www.linkedin.com/in/latika-popli/)
 
 
 
